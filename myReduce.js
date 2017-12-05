@@ -4,7 +4,18 @@
 function myReduce(arr, callback) {
 
 //  CODE INSIDE HERE   //
-
+	let x =arr[0];
+	if(arguments.length > 2){
+		x = arguments[2];
+		for(let i = 0; i<arr.length;++i){
+			x = callback(x,arr[i],i,arr);
+		}
+	} else {
+		for(let i = 1; i<arr.length;++i){
+			x = callback(x,arr[i],i,arr);
+		}
+	}
+	return x;
 }
 
 /*

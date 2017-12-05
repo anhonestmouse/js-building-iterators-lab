@@ -3,7 +3,11 @@
 function myMap(arr, callback) {
 
 //  CODE INSIDE HERE   //
-
+let myArray=[];
+	for(let i = 0; i<arr.length;++i){
+		myArray[i] = callback(arr[i],i,arr);
+	}
+	return myArray;
 }
 
 /*
